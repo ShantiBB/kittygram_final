@@ -152,8 +152,6 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
             cd kittygram
-            echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" > .env
-            echo "IP_HOST=${{ secrets.IP_HOST }}" >> .env
             sudo docker compose -f docker-compose.production.yml pull
             sudo docker compose -f docker-compose.production.yml down
             sudo docker compose -f docker-compose.production.yml up -d

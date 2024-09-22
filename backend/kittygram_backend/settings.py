@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = True
+DEBUG = os.getenv('DEBUG_MOD') == 'True'
 
 ALLOWED_HOSTS = [os.getenv('IP_HOST'), '127.0.0.1', 'localhost',
                  'kittygram.3utilities.com']
